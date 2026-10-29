@@ -1,0 +1,89 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "field:farm_name",
+ "creation": "2026-10-29 10:38:46.746124",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "farm_section",
+  "farm_name",
+  "location",
+  "farm_owner",
+  "size_acres",
+  "soil_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "farm_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Farm Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "farm_owner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Farm Owner",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "size_acres",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Size (Acres)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "soil_type",
+   "fieldtype": "Select",
+   "label": "Soil Type",
+   "options": "Clay\nSandy\nLoamy\nSilty\nPeaty\nChalky\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "farm_section",
+   "fieldtype": "Section Break",
+   "label": "Farm"
+  }
+ ],
+ "grid_page_length": 50,
+ "links": [],
+ "modified": "2026-10-29 10:52:56.310718",
+ "modified_by": "nandankumarjha100@gmail.com",
+ "module": "Agrismart",
+ "name": "Farm",
+ "naming_rule": "By fieldname",
+ "owner": "nandankumarjha100@gmail.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
