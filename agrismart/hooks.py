@@ -210,6 +210,11 @@ use_json_request_body = True
 # 		"agrismart.tasks.monthly"
 # 	],
 # }
+scheduler_events = {
+    "daily": [
+        "agrismart.tasks.send_purchase_request_reminders"
+    ]
+}
 
 # Testing
 # -------

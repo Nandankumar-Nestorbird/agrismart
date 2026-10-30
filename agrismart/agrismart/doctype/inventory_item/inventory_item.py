@@ -32,3 +32,11 @@ class InventoryItem(Document):
 
 		if self.current_stock < 0:
 			frappe.throw(_("Current stock cannot be negative."))
+   
+		if self.custom_target_stock_level is None or self.custom_target_stock_level <= 0:
+			frappe.throw(_("Target Stock Level must be greater than zero."))
+
+		if self.custom_target_stock_level <= self.reorder_level:
+			frappe.throw(
+				_("Target Stock Level must be greater than Reorder Level.")
+			)

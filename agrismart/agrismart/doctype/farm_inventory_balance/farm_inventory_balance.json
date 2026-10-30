@@ -9,7 +9,8 @@
  "field_order": [
   "farm",
   "inventory_item",
-  "current_stock"
+  "current_stock",
+  "low_stock_notified"
  ],
  "fields": [
   {
@@ -34,12 +35,18 @@
    "in_list_view": 1,
    "label": "Current Stock",
    "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "low_stock_notified",
+   "fieldtype": "Check",
+   "label": "Low Stock Notified"
   }
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2026-10-29 11:03:23.585577",
- "modified_by": "Administrator",
+ "modified": "2026-10-30 11:22:40.137396",
+ "modified_by": "nandankumarjha100@gmail.com",
  "module": "Agrismart",
  "name": "Farm Inventory Balance",
  "naming_rule": "Random",

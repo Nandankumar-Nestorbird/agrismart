@@ -13,7 +13,8 @@
   "farm",
   "transaction_type",
   "quantity",
-  "remarks"
+  "remarks",
+  "purchase_request"
  ],
  "fields": [
   {
@@ -71,12 +72,18 @@
    "fieldname": "remarks",
    "fieldtype": "Small Text",
    "label": "Remarks"
+  },
+  {
+   "fieldname": "purchase_request",
+   "fieldtype": "Link",
+   "label": "Purchase Request",
+   "options": "Purchase Request"
   }
  ],
  "grid_page_length": 50,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-10-29 13:14:30.494803",
+ "modified": "2026-10-30 11:29:03.473382",
  "modified_by": "nandankumarjha100@gmail.com",
  "module": "Agrismart",
  "name": "Stock Transaction",

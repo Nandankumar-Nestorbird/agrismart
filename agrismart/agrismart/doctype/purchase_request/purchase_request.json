@@ -10,7 +10,11 @@
   "farm",
   "requested_quantity",
   "required_by_date",
-  "status"
+  "status",
+  "expected_stock",
+  "received_quantity",
+  "pending_quantity",
+  "last_reminder_date"
  ],
  "fields": [
   {
@@ -50,11 +54,37 @@
    "label": "Status",
    "options": "Draft\nApproved\nOrdered",
    "reqd": 1
+  },
+  {
+   "fieldname": "expected_stock",
+   "fieldtype": "Float",
+   "label": "Expected Stock",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "received_quantity",
+   "fieldtype": "Float",
+   "label": "Received Quantity",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "pending_quantity",
+   "fieldtype": "Float",
+   "label": "Pending Quantity",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_reminder_date",
+   "fieldtype": "Date",
+   "label": "Last Reminder Date",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2026-10-29 11:14:48.946793",
+ "modified": "2026-10-30 11:25:48.978402",
  "modified_by": "nandankumarjha100@gmail.com",
  "module": "Agrismart",
  "name": "Purchase Request",

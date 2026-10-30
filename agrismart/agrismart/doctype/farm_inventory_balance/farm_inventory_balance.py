@@ -1,22 +1,28 @@
-# Copyright (c) 2026, Nandan Kumar and contributors
-# For license information, please see license.txt
 
-# import frappe
+import frappe
+from frappe import _
 from frappe.model.document import Document
 
 
 class FarmInventoryBalance(Document):
-	# begin: auto-generated types
-	# This code is auto-generated. Do not modify anything in this block.
 
-	from typing import TYPE_CHECKING
+    def validate(self):
+        if not self.farm or not self.inventory_item:
+            frappe.throw(_("Farm and Inventory Item are required."))
 
-	if TYPE_CHECKING:
-		from frappe.types import DF
+        duplicate = frappe.db.exists(
+            "Farm Inventory Balance",
+            {
+                "farm": self.farm,
+                "inventory_item": self.inventory_item,
+                "name": ["!=", self.name]
+            }
+        )
 
-		current_stock: DF.Float
-		farm: DF.Link
-		inventory_item: DF.Link
-	# end: auto-generated types
+        if duplicate:
+            frappe.throw(
+                _("A Farm Inventory Balance already exists for this Farm and Inventory Item.")
+            )
 
-	_DOCTYPE_NAME = "Farm Inventory Balance"
+        if self.current_stock is None or self.current_stock < 0:
+            frappe.throw(_("Current Stock cannot be negative."))
